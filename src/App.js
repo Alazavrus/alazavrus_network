@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Route, withRouter, Switch} from "react-router-dom";
+import {Route, withRouter, Switch, HashRouter} from "react-router-dom";
 import React from "react";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
@@ -78,11 +78,11 @@ const WithRouterApp = compose(
 
 const AppWrapper = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Provider store={store}>
                 <WithRouterApp />
             </Provider>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
