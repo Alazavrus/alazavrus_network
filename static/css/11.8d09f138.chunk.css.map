@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/StubPage/StubPage.module.css"],"names":[],"mappings":"AAAA,mCACI,iBAAkB,CAClB,gBAAiB,CACjB,cACJ","file":"11.8d09f138.chunk.css","sourcesContent":[".stub_page_wrapper {\r\n    text-align: center;\r\n    margin-top: 100px;\r\n    font-size: 22px;\r\n}"]}
