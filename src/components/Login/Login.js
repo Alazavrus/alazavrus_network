@@ -8,15 +8,12 @@ import css from "./Login.module.css";
 import SubmitButton from "../common/SubmitButton/SubmitButton";
 import cn from "classnames";
 
-const maxLength12 = maxLengthCreator(12);
-const minLength4 = minLengthCreator(4);
-
 const LoginForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit} className={css.login_form}>
             <FieldInput className={css.login_form__indent} name={"login"} validate={required} placeholder={"Логин"} />
             <FieldInput className={css.login_form__indent}  name={"password"} type={"password"}
-                        validate={[required, maxLength12, minLength4]}
+                        validate={[required]}
                         placeholder={"Пароль"}/>
 
             <label className={cn(css.remember_me, css.login_form__indent)}>

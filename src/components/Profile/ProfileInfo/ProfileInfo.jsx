@@ -19,6 +19,7 @@ import {useHistory} from "react-router";
 
 const ProfileInfo = ({profile, status, isOwner, updateStatus, savePhoto, startChatting}) => {
     let {photos, fullName, lookingForAJob, lookingForAJobDescription, aboutMe, contacts, userId} = profile;
+    debugger
     let {facebook, github, instagram, mainLink, twitter, vk, website, youtube} = contacts;
     let history = useHistory();
     let toWrite = () => {

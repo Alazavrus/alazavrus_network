@@ -22,19 +22,18 @@ const Notes            = React.lazy(() => import('./components/Notes/Notes'));
 
 const Content = () => {
     return (
-
-            <div className="app-wrapper">
-                <Navbar/>
-                <div className="app-wrapper__content">
-                    <Route path="/news"    render={ WithSuspense(News) } />
-                    <Route path="/music"   render={ WithSuspense(Music) } />
-                    <Route path="/setting" render={ WithSuspense(SettingContainer) } />
-                    <Route path="/users"   render={ WithSuspense(UsersContainer) } />
-                    <Route path="/notes"   render={ WithSuspense(Notes) } />
-                    <Route path="/dialogs" render={ WithSuspense(DialogsContainer) }/>
-                    <Route path="/profile/:userId?" render={ WithSuspense(ProfileContainer) }/>
-                </div>
+        <div className="app-wrapper">
+            <Navbar/>
+            <div className="app-wrapper__content">
+                <Route path="/news"    render={ WithSuspense(News) } />
+                <Route path="/music"   render={ WithSuspense(Music) } />
+                <Route path="/setting" render={ WithSuspense(SettingContainer) } />
+                <Route path="/users"   render={ WithSuspense(UsersContainer) } />
+                <Route path="/notes"   render={ WithSuspense(Notes) } />
+                <Route path="/dialogs" render={ WithSuspense(DialogsContainer) }/>
+                <Route path="/profile/:userId?" render={ WithSuspense(ProfileContainer) }/>
             </div>
+        </div>
     )
 }
 
