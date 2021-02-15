@@ -3,8 +3,8 @@
     "static/js/0.3a15acda.chunk.js": "/alazavrus_network/static/js/0.3a15acda.chunk.js",
     "static/js/0.3a15acda.chunk.js.map": "/alazavrus_network/static/js/0.3a15acda.chunk.js.map",
     "main.css": "/alazavrus_network/static/css/main.6322d1cf.chunk.css",
-    "main.js": "/alazavrus_network/static/js/main.c14a6ed8.chunk.js",
-    "main.js.map": "/alazavrus_network/static/js/main.c14a6ed8.chunk.js.map",
+    "main.js": "/alazavrus_network/static/js/main.36dfe146.chunk.js",
+    "main.js.map": "/alazavrus_network/static/js/main.36dfe146.chunk.js.map",
     "runtime-main.js": "/alazavrus_network/static/js/runtime-main.1dfc150f.js",
     "runtime-main.js.map": "/alazavrus_network/static/js/runtime-main.1dfc150f.js.map",
     "static/js/3.5e0809ea.chunk.js": "/alazavrus_network/static/js/3.5e0809ea.chunk.js",
@@ -63,6 +63,6 @@
     "static/js/runtime-main.1dfc150f.js",
     "static/js/3.5e0809ea.chunk.js",
     "static/css/main.6322d1cf.chunk.css",
-    "static/js/main.c14a6ed8.chunk.js"
+    "static/js/main.36dfe146.chunk.js"
   ]
 }
