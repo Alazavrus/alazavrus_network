@@ -1,5 +1,5 @@
 import './App.css';
-import {Route, withRouter, Switch, HashRouter} from "react-router-dom";
+import {Route, withRouter, Switch, HashRouter, Redirect, BrowserRouter} from "react-router-dom";
 import React from "react";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
@@ -54,11 +54,23 @@ class App extends React.Component {
 
         return (
             <>
-                <HeaderContainer/>
                 <Switch>
-                    <Route path="/login" render={ WithSuspense(Login) }/>
-                    <Route path="/">
-                        <ContentWithRedirect />
+                    <Route exact path="/">
+                        <Redirect to={process.env.PUBLIC_URL} />
+                    </Route>
+                    <Route exact path={process.env.PUBLIC_URL}>
+                        <HeaderContainer/>
+                        <HashRouter>
+                            <Switch>
+                                <Route path="/login" render={ WithSuspense(Login) }/>
+                                <Route exact path="/">
+                                    <Redirect to={"/profile"} />
+                                </Route>
+                                <Route path="/">
+                                    <ContentWithRedirect />
+                                </Route>
+                            </Switch>
+                        </HashRouter>
                     </Route>
                 </Switch>
             </>
@@ -78,11 +90,11 @@ const WithRouterApp = compose(
 
 const AppWrapper = () => {
     return (
-        <HashRouter>
+        <BrowserRouter>
             <Provider store={store}>
                 <WithRouterApp />
             </Provider>
-        </HashRouter>
+        </BrowserRouter>
     )
 }
 
