@@ -7,7 +7,7 @@ const Header = (props) => {
     return (
         <header className={css.header}>
             <div className={css.header_container}>
-                <a href="/" className={css.logo_link}>
+                <a href={process.env.PUBLIC_URL} className={css.logo_link}>
                     <img className={css.logo} src={logoIcon} alt=""/>
                 </a>
                 {
