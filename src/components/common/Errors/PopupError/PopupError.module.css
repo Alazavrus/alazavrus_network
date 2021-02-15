@@ -1,0 +1,24 @@
+.error_block__text {
+    display: block;
+    position: absolute;
+    background: #ff4040;
+    color: #fff;
+    border-radius: 10px;
+    left: 0;
+    bottom: 130%;
+    padding: 10px;
+    animation: off 2s 2s ;
+    animation-fill-mode: forwards;
+}
+.error_block__text::after {
+    content: '';
+    position: absolute;
+    left: 20px; bottom: -20px;
+    border: 10px solid transparent;
+    border-top: 10px solid #ff4040;
+}
+
+@keyframes off {
+    0% { opacity: 1 }
+    100% { opacity: 0 }
+}

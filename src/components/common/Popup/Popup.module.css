@@ -1,0 +1,61 @@
+.popup_background_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    z-index: 500;
+}
+.popup_background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    animation-name: backgroundBlur;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes backgroundBlur {
+    from {
+        backdrop-filter: blur(4px);
+        background: rgba(0,0,0,0);
+    }
+    to {
+        backdrop-filter: blur(4px);
+        background: rgba(0,0,0,0.25);
+    }
+}
+
+.popup_content_container {
+    min-width: 300px;
+    height: auto;
+    padding: 30px;
+    position: relative;
+    z-index: 501;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 0px 5px 0px #d8d8d8;
+    cursor: default;
+}
+
+.popup_close_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.popup_close_button:hover {
+    box-shadow: 0px 0px 5px 0px #333;
+}

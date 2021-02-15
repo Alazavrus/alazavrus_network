@@ -1,0 +1,67 @@
+.users_container {
+    padding: 10px;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 94px 1fr;
+    grid-column-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.avatar_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user_avatar {
+    margin-bottom: 10px;
+}
+.user_avatar_pointer {
+    cursor: pointer;
+}
+
+.follow_button {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #03a9f4;
+    border-radius: 10px;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.follow_button:disabled {
+    background: #ccc;
+    border: 1px solid #ccc;
+    color: white;
+}
+
+.follow {
+    color: #fffefe;
+    background: #03a9f4;
+}
+
+.unfollow {
+    color: #03a9f4;
+    background: #fffefe;
+}
+
+.profileInfo_container {
+    border: 1px solid #b7b7b7;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    color: #444;
+}
+
+.fullName {
+
+}
+
+.status {
+    font-size: 12px;
+    position: absolute;
+    bottom: 5px;
+}

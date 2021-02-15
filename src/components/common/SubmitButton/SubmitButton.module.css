@@ -1,0 +1,38 @@
+.submit_button {
+    width: 100%;
+    height: 30px;
+    padding: 4px;
+    border: 1px solid #00aef8;
+    border-radius: 5px;
+    background: #00aef8;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    color:  #fff;
+    transition: 0.4s;
+}
+
+.submit_button:hover {
+    background: #50c8ff;
+    border: 1px solid #50c8ff;
+    color: #fff;
+    animation: submit .1s;
+}
+
+@keyframes submit {
+    0%  {
+        background: radial-gradient(#50c8ff 0, #00aef8 100%);
+    }
+    25% {
+        background: radial-gradient(#50c8ff 40%, #00aef8 100%);
+    }
+    50% {
+        background: radial-gradient(#50c8ff 60%, #00aef8 100%);
+    }
+    75% {
+        background: radial-gradient( #50c8ff 80%, #00aef8 100%);
+    }
+    100% {
+        background: radial-gradient( #50c8ff 100%, #00aef8 100%);
+    }
+}

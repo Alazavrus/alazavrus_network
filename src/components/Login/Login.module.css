@@ -1,0 +1,29 @@
+.login_wrapper {
+    width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: calc(var(--header-height) + 60px) auto 0 auto;
+}
+
+.login_form {
+    width: 100%;
+}
+.login_form__indent {
+    margin-bottom: 15px;
+}
+
+.remember_me {
+    display: flex;
+}
+
+.remember_me__text {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.formSummaryError {
+    color: red;
+    margin-bottom: 5px;
+}

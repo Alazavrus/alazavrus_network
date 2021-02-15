@@ -1,0 +1,103 @@
+.profile_info_container {
+    margin-bottom: 30px;
+}
+
+.description_block {
+    display: flex;
+}
+
+.infoBlock {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    margin-left: 15px;
+    position: relative;
+}
+
+.userName {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* status */
+
+.status_block {
+    display: flex;
+    align-items: baseline;
+    height: 35px;
+    margin-bottom: 30px;
+    width: 300px;
+    position: relative;
+}
+.status_text {
+    display: inline-flex;
+    align-items: center;
+    height: 35px;
+    font-size: 16px;
+    color: #444;
+    overflow: hidden;
+}
+.status_text > span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.status_text_with_edit {
+    cursor: pointer;
+}
+.status_input {
+    width: 300px;
+    padding: 0;
+    font-size: 16px;
+    color: #444;
+    border: none;
+    box-shadow: inset 0px -1px 0px 0px #c4c4c4;
+    border-radius: 0;
+}
+
+/* jobs */
+
+.jobs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.jobs_description {
+    margin-left: 10px;
+}
+
+/* about_me */
+
+.about_me {
+
+}
+
+/*  Contact */
+
+.contact_container {
+    display: flex;
+    column-gap: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.contact {
+    transform: scale(1);
+    transition: transform .3s;
+}
+.contact:hover {
+     transform: scale(1.2);
+ }
+
+
+.contact:hover > .contact_info {
+    display: block;
+}
+
+.contact_info {
+    display: none;
+}

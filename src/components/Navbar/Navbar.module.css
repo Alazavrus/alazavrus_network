@@ -1,0 +1,35 @@
+.nav {
+    grid-area: n;
+    padding: 0;
+    position: fixed;
+    z-index: 10;
+    top: var(--header-height);
+    width: 198px;
+}
+
+.item {
+}
+
+.item a {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.item:hover {
+    background: #f0f2f5;
+}
+
+.item a.active {
+    /*color: #3ebdf6;*/
+    /*background: #f0f2f5;*/
+}
+
+.item_img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 10px;
+}

@@ -1,0 +1,23 @@
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+.contacts_title {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.contacts_container {
+    grid-column: 1 / -1;
+}
+
+.submit_button {
+    grid-column: 2;
+}

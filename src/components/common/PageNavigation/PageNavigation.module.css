@@ -1,0 +1,20 @@
+.nav_button__container {
+    display: grid;
+    grid-template-columns: repeat(14, minmax(25px, max-content));
+    grid-column-gap: 5px;
+    justify-content: center;
+}
+
+.nav_button {
+    padding: 5px 10px;
+    background: transparent;
+    border: 1px solid #444;
+    outline: none;
+    cursor: pointer;
+}
+
+.nav_button.selected {
+    font-weight: bold;
+    border-radius: 3px;
+    border: 2px solid #444;
+}

@@ -1,0 +1,29 @@
+.dialog_item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.dialog_item:hover {
+    background: #f0f2f5;
+}
+.avatar {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.user_name {
+    font-size: 20px;
+}
+.new_messages_count {
+    margin-left: auto;
+    background: #5181b8;
+    height: 20px;
+    border-radius: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    min-width: 20px;
+    padding: 0 5px;
+}

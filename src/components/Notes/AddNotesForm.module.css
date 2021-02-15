@@ -1,0 +1,43 @@
+.form {
+    width: 600px;
+}
+
+.input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.save {
+    width: 100%;
+    height: 30px;
+    padding: 4px;
+    border: 1px solid #03a9f4;
+    border-radius: 5px;
+    background: #03a9f4;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #fff;
+}
+.save:hover {
+    background: #fff;
+    color: #333;
+ }

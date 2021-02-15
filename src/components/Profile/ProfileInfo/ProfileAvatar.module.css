@@ -1,0 +1,42 @@
+.avatar_container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+.avatar {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+.avatar_full_size {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.file_input {
+    display: none;
+}
+
+.change_photo__button_container {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.change_photo__button {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 5px;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.change_photo__button:hover {
+    background: rgba(255, 255, 255, .9);
+}
+

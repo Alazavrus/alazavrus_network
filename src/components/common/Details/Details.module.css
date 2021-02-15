@@ -1,0 +1,25 @@
+.details {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.details:hover {
+    box-shadow: 0 0 3px 0px #b3b3b3;
+}
+
+.summary {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    outline: none;
+}
+
+.content {
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}

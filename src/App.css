@@ -1,0 +1,17 @@
+.app-wrapper {
+  display: grid;
+  grid-template-areas: "n c";
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+  width: 1200px;
+  height: 100%;
+  margin: var(--header-height) auto 0 auto;
+}
+
+.app-wrapper__content {
+  grid-area: c;
+  display: flex;
+  flex-direction: column;
+}
+

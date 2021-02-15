@@ -1,0 +1,31 @@
+.notes {
+    padding: 0 10px;
+}
+
+.notes h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    cursor: default;
+}
+
+.addNote {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.edit {
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
