@@ -35,8 +35,8 @@ export const dialogApi = {
     getDialogs() {
         return instance.get(`dialogs/`).then(res => res.data)
     },
-    getMessages(userId) {
-        return instance.get(`dialogs/${userId}/messages?page=1&count=20`).then(res => res.data).catch(err => err)
+    getMessages(userId, page = 1, count = 20) {
+        return instance.get(`dialogs/${userId}/messages?page=${page}&count=${count}`).then(res => res.data).catch(err => err)
     },
     sendMessage(userId, message) {
         return instance.post(`dialogs/${userId}/messages`, {body: message}).then(res => res.data).catch(err => err)
