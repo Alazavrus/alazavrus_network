@@ -7,31 +7,36 @@ import MessageItemsContainer from "./MessageItems/MessageItemsContainer";
 import {getDialogs, getInterlocutor, getMessages, resetMessages, sendMessage, resetToDefaultState} from "../../redux/dialogs-reducer";
 import MessageItemsHeader from "./MessageItems/MessageItemsHeader";
 import SenderMessageForm from "./SenderMessageForm/SenderMessageForm";
-import {useEffect} from "react";
+import {useEffect, useCallback} from "react";
 
-const DialogContainer = ({authUserPhoto, dialogs, interlocutor, messages, location: {pathname}, ...props}) => {
-    let interlocutorId = Number(pathname.split("/")[2]);
-    let interlocutorName  = interlocutor ? interlocutor.fullName : null;
-    let interlocutorPhoto = interlocutor ? interlocutor.photos.small : null;
+const DialogContainer = (props) => {
+    const {
+        authUserPhoto, dialogs, interlocutor, messages, location: {pathname},
+        getMessages, getInterlocutor, getDialogs, resetToDefaultState, sendMessage
+    } = props;
+    const interlocutorId = Number(pathname.split("/")[2]);
+    const interlocutorName  = interlocutor ? interlocutor.fullName : null;
+    const interlocutorPhoto = interlocutor ? interlocutor.photos.small : null;
 
     useEffect(() => {
         if(interlocutorId) {
-            props.getInterlocutor(interlocutorId)
-            props.getMessages(interlocutorId)
+            getInterlocutor(interlocutorId)
+            getMessages(interlocutorId)
         } else {
-            props.getDialogs()
+            getDialogs()
         }
         return () => {
-            props.resetToDefaultState()
+            resetToDefaultState()
         }
-    }, [interlocutorId])
+    }, [getMessages, getInterlocutor, getDialogs, resetToDefaultState, interlocutorId])
 
-    let sendMessage = (data) => {
-        if(interlocutorId) props.sendMessage(interlocutorId, data.messageText)
+    let onSendMessage = (data) => {
+        if(interlocutorId) sendMessage(interlocutorId, data.messageText)
     }
-    const moreMessages = () => {
-        props.getMessages(interlocutorId, 1)
-    }
+
+    const moreMessages = useCallback(() => {
+        getMessages(interlocutorId, 1)
+    }, [getMessages, interlocutorId])
 
     return (
         <div style={{display: "flex", flexDirection: "column", height: "100%", border: "1px solid #ddd"}}>
@@ -52,7 +57,7 @@ const DialogContainer = ({authUserPhoto, dialogs, interlocutor, messages, locati
                                                onMoreMessages={moreMessages}
                                                resetMessages={props.resetMessages}/>
 
-                        <SenderMessageForm onSubmit={sendMessage}/>
+                        <SenderMessageForm onSubmit={onSendMessage}/>
                     </>
 
             }

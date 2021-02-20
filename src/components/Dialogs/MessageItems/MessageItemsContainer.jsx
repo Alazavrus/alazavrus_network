@@ -14,7 +14,7 @@ const MessageItemsContainer = (props) => {
             window.removeEventListener("scroll", infinityScroll);
             onMoreMessages();
         }
-    }, [])
+    }, [onMoreMessages])
 
     useEffect(() => {
         if(!isTotalLoadMessages && messages.length) {
@@ -22,20 +22,20 @@ const MessageItemsContainer = (props) => {
         } else {
             window.removeEventListener("scroll", infinityScroll);
         }
-    }, [isTotalLoadMessages, messages])
+    }, [isTotalLoadMessages, messages, infinityScroll])
 
     useEffect(() => {
         return () => {
             resetMessages([])
         }
-    }, [])
+    }, [resetMessages])
 
     useEffect(() => {
         if(isScrollBottom && messages.length && interlocutorId) {
             scrollBottom();
             setIsScrollBottom(false)
         }
-    }, [messages, interlocutorId])
+    }, [messages, isScrollBottom, interlocutorId])
 
     useEffect(() => {
         if(interlocutorId) {
