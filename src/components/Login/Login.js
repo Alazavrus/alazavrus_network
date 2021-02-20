@@ -1,6 +1,6 @@
 import {reduxForm} from "redux-form";
 import {FieldCheckbox, FieldInput} from "../common/FormsControls/FormsControls";
-import {maxLengthCreator, minLengthCreator, required} from "../../utils/validators";
+import {required} from "../../utils/validators";
 import {connect} from "react-redux";
 import {logIn} from "../../redux/auth-reducer";
 import {Redirect} from "react-router-dom";
