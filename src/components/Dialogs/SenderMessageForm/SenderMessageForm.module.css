@@ -1,0 +1,11 @@
+.create_message_container {
+    padding: 10px;
+    position: sticky;
+    bottom: 0;
+    background: white;
+    margin-top: auto;
+}
+
+.textarea {
+    height: 70px;
+}
