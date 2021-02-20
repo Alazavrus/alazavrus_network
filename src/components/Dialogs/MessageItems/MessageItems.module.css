@@ -1,0 +1,27 @@
+.messages_items {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.message_header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    position: sticky;
+    top: var(--header-height);
+}
+
+.message_header__back {
+    margin-right: 10px;
+}
+
+.message_header__user_name {
+    text-align: center;
+    width: 100%;
+}
