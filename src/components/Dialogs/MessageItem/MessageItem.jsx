@@ -1,6 +1,7 @@
-import css from "../Dialogs.module.css";
+import css from "./MessageItem.module.css";
 import Avatar from "../../common/Avatar/Avatar";
-import cn from "classnames"
+import cn from "classnames";
+
 /*
     addedAt: "2021-02-10T13:34:46.353"
     body: "asd"
@@ -13,9 +14,9 @@ import cn from "classnames"
 */
 
 const MessageItem = (props) => {
-    let { addedAt, body, senderId, senderName, viewed,
-        userId, userPhoto, authUserPhoto, isSubMessage, isNextMessageTheIsSub } = props;
-    let isInterlocutor = userId === senderId;
+    const { addedAt, body, senderId, senderName, viewed,
+        interlocutorId, interlocutorPhoto, authUserPhoto, isSubMessage, isNextMessageTheIsSub } = props;
+    let isInterlocutor = interlocutorId === senderId;
     let date = new Date(addedAt);
     let dateString = date.toLocaleDateString("ru", {year: "numeric", day: "numeric", month: "long"})
     let timeString = date.toLocaleTimeString("ru", {hour: "numeric", minute: "numeric"})
@@ -34,7 +35,7 @@ const MessageItem = (props) => {
                 <div className={css.message_avatar}>
                     {
                         !isSubMessage &&
-                            <Avatar style={{borderRadius: "50%"}} photo={ isInterlocutor ? userPhoto : authUserPhoto } width={"50px"} height={"50px"} />
+                            <Avatar style={{borderRadius: "50%"}} photo={ isInterlocutor ? interlocutorPhoto : authUserPhoto } width={"50px"} height={"50px"} />
                     }
                 </div>
             </div>
@@ -47,7 +48,6 @@ const MessageItem = (props) => {
                         </div>
                 }
                 <div className={css.message_text} dangerouslySetInnerHTML={{__html:body}}></div>
-
             </div>
         </div>
     )
